@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live coding: vue-api</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>Fetching API</h1>
+
+        <section>
+            <h2>Axios</h2>
+            <p v-if="isLoading">Caricamento...</p>
+            <ol v-if="posts.length > 0">
+                <li v-for="post in posts" :key="post.id">
+                    <h3>{{ post.title }}</h3>
+                    <p>{{ post.body }}</p>
+                </li>
+            </ol>
+            <p v-if="error">Si è verificato un errore: {{ error.message }}</p>
+        </section>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="script.js" type="module"></script>
+</body>
+
+</html>
