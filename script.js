@@ -1,5 +1,5 @@
 //% Axios
-import { HTTP } from "./Utils/Axios.js";
+import { HTTP } from "./api/Axios.js";
 const App = Vue.createApp({
     data() {
         return {
